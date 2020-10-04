@@ -1,0 +1,20 @@
+#include "list.h"
+    
+    
+    int main() {
+        
+
+        let *List = NULL;
+
+        add(&List , 1);
+        add(&List , 2); 
+        add(&List , 3);             
+        add(&List , 4);
+        add(&List , 5);
+        add(&List , 6);
+        add(&List , 7);
+        
+        
+        
+        return 0;
+    }

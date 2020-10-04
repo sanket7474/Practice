@@ -22,11 +22,12 @@
        
         
     }
+
     void add(let **list , int data) {
 
         let *temp = *list;
         let *node;
-        
+
         node = (let*)malloc(sizeof(let));
         node->next = NULL;
         node->data = data;
@@ -56,20 +57,5 @@
 
             temp = temp->next;
         }
+        
     }
-    int main() {
-
-        let *List = NULL;
-
-        add(&List , 12);
-        add(&List , 23);
-        add(&List , 34);
-
-        disp(&List);
-
-        add(&List , 4);
-
-        disp(&List);
-        return 0;
-    }
-
