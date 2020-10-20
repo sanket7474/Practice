@@ -1,4 +1,4 @@
-// Given a Linked List which is sorted how will you unsert an element in a sorted way
+// Given a Linked List which is sorted how will you insert an element in a sorted way
 
 #include "list.h"
 
@@ -34,7 +34,7 @@
         add(&List , 4);   //temp->next            
         add(&List , 5);
         add(&List , 6);
-        add(&List , 8);
+        //add(&List , 8); node()->
         add(&List , 9);
 
         // disp(&List);
