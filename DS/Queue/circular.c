@@ -62,6 +62,7 @@
                 Q->front = -1;
                 Q->rear = -1;
             }
+            
             else {
                 Q->front += 1;
                 Q->front = Q->front % Q->cap;

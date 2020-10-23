@@ -7,7 +7,6 @@
         int front;
         int rear;
         int cap;  // optional
-
         int *arr;
     };
     int isFull(struct arrayQ* Q) {
