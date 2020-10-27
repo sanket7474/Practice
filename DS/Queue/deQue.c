@@ -73,13 +73,25 @@
         }
         else {
 
-            struct List *temp = Q->front;
-            int data = temp->data;
-            Q->front = Q->front->next;
-            Q->front->prev = NULL; 
-            free(temp);
+            if(Q->front == Q->rear) {
 
-            return data;
+                struct List *temp = Q->front;
+                int data = temp->data;
+                Q->front = Q->rear = NULL;
+
+                free(temp);
+                return data;
+            }
+            else {
+                
+                struct List *temp = Q->front;
+                int data = temp->data;
+                Q->front = Q->front->next;
+                Q->front->prev = NULL; 
+                free(temp);
+                return data;
+            }
+            
         }
 
     }
@@ -91,14 +103,25 @@
             printf("\nEmpty!");
         }
         else {
+            if(Q->front == Q->rear) {
 
-            struct List *temp = Q->rear;
-            int data = temp->data;
-            Q->rear = Q->rear->prev;
-            Q->rear->next = NULL;
-            free(temp);
+                struct List *temp = Q->front;
+                int data = temp->data;
+                Q->front = Q->rear = NULL;
 
-            return data;
+                free(temp);
+                return data;
+            }
+            else {
+                
+                struct List *temp = Q->rear;
+                int data = temp->data;
+                Q->rear = Q->rear->prev;
+                Q->rear->next = NULL;
+                free(temp);
+                return  data;
+            }
+            
         }
 
     }
